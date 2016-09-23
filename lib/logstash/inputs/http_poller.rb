@@ -168,8 +168,8 @@ class LogStash::Inputs::HTTP_Poller < LogStash::Inputs::Base
 
   private
   def setup_interval(queue)
-    @interval_thread = Thread.current
-    Stud.interval(@interval) do
+    #@interval_thread = Thread.current
+    #Stud.interval(@interval) do
       run_once(queue)
     end
   end
